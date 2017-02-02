@@ -1,0 +1,25 @@
+.intro-header {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background: url(/assets/images/banner.jpg) no-repeat center center;
+    background-size: cover;
+    min-height: 500px;
+}
+
+.site-footer {
+	background-color: #374147;
+	padding: 40px 0;
+	color: #fff;
+	margin-top: 30px;
+	text-align: center;
+}
+
+.site-footer a {
+	color: #fff;
+	opacity: 0.6;
+}
+
+.site-footer a:hover {
+	color: #fff;
+	opacity: 1;
+}
