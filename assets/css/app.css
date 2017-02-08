@@ -1,3 +1,11 @@
+/* Define some basic padding classes */
+.top5 {padding-top: 5px;}
+.top10 {padding-top: 10px;}
+.top15 {padding-top: 15px;}
+.top20 {padding-top: 20px;}
+.top25 {padding-top: 25px;}
+
+
 .intro-header {
 	padding-top: 50px;
 	padding-bottom: 50px;
