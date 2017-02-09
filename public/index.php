@@ -4,7 +4,7 @@
 require($_SERVER[ 'DOCUMENT_ROOT' ] . '/../includes/application_includes.php');
 
 // Include the HTML layout class
-require_once(WS_TEMPLATES . 'Layout.php');
+require_once(FS_TEMPLATES . 'Layout.php');
 
 // Connect to the database
 $db = new Database(DB_HOST, DB_USER, DB_PASS, DB_NAME);
