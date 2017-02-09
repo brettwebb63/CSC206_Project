@@ -1,7 +1,7 @@
 <?php
 
 // Load all application files and configurations
-require($_SERVER['DOCUMENT_ROOT'].'/includes/application_includes.php');
+require($_SERVER[ 'DOCUMENT_ROOT' ] . '/../includes/application_includes.php');
 
 // Include the HTML layout class
 require_once(WS_TEMPLATES . 'Layout.php');

@@ -9,7 +9,7 @@
 .intro-header {
 	padding-top: 50px;
 	padding-bottom: 50px;
-	background: url(/assets/images/banner.jpg) no-repeat center center;
+	background: url(/public/assets/images/banner.jpg) no-repeat center center;
     background-size: cover;
     min-height: 500px;
 }
