@@ -10,13 +10,13 @@ require_once(FS_TEMPLATES . 'Layout.php');
 $db = new Database(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
 // Run a simple query that will be rendered below
-$sql = 'select * from pages';
+$sql = 'select id, name, description from pages';
 $res = $db->query($sql);
 
 
 // Generate the HTML for the top of the page
 Layout::pageTop('CSC206 Project');
-
+// include(FS_TEMPLATES . 'pageTop.php')
 /**
  *
  * This implementation mixes html and php code to enter data
@@ -33,10 +33,10 @@ Layout::pageTop('CSC206 Project');
                 <table class="table table-hover">
                    <tr>
                        <th>id</th>
-                       <th>name</th>
-                       <th>description</th>
-                       <th>created_at</th>
-                       <th>updated_at</th>
+                       <th>name1</th>
+                       <th>description1</th>
+                       <th>created_at1</th>
+                       <th>updated_at1</th>
                    </tr>
 <?php
                 while ($row = $res->fetch()){
@@ -70,7 +70,20 @@ Layout::pageTop('CSC206 Project');
 <?php
                 $table = Layout::buildTable($res->fetchAll());
                 echo $table;
-?>
+
+                $title = 'Hello Italy';
+                $date = 'February 23, 1998';
+                $author = 'Fred Flintstone';
+                $content = 'This is my long story about blah balhalb a bThis is my long story about blah balhalb a b
+                This is my long story about blah balhalb a b
+                This is my long story about blah balhalb a b
+                This is my long story about blah balhalb a b
+                This is my long story about blah balhalb a b
+                This is my long story about blah balhalb a b';
+                Layout::news($title, $date, $author, $content);
+
+
+                ?>
             </section>
         </div>
     </div>
