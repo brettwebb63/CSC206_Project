@@ -3,9 +3,17 @@
 class layout
 {
 
+    /**
+     * Creates the top part of the page.  This will usually be the HEAD area plus the nav bar and anything else that is
+     * above the "content" of that page.
+     *
+     * @param $title
+     */
     public static function pageTop($title)
     {
+        // This builds the web path to the app.css file and is embedded in the header below
         $appcss = WS_CSS . 'app.css';
+
         echo <<<pagetop
     <!doctype html>
     <html>
@@ -90,7 +98,10 @@ pagetop;
 
     }
 
-
+    /**
+     * Creates the bottom part of the page.  This will usually be the footer area and anything else that comes below
+     * the page content.
+     */
     public static function pageBottom()
     {
 
@@ -112,9 +123,9 @@ pagetop;
 </body>
 </html>
 pagebottom;
-
-
     }
+
+
 
     /**
      * This method will take a 2-dimensional array and create a table.
@@ -160,19 +171,6 @@ pagebottom;
         $table .= '</table>';
 
         return $table;
-    }
-
-    public static function news($title, $date, $author, $content)
-    {
-        echo <<<blogpost
-        <div class="blog-post">
-                    <h2 class="blog-post-title">$title</h2>
-            <p class="blog-post-meta">$date by <a href="#">$author</a></p>
-
-            <p>$content</p>
-        </div>
-        <!-- /.blog-post -->
-blogpost;
     }
 
 }
