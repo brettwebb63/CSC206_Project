@@ -12,7 +12,7 @@ $db = new Database(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
 
 // Get the stories for column 1 from the database
-$sql = 'select * from posts order by startDate desc';
+$sql = 'select * from posts';
 $posts = $db->query($sql);
 
 // Run a simple query that will be rendered in column 2 below
