@@ -36,14 +36,19 @@ Layout::pageTop('CSC206 Project');
                     print_r($_POST);
                     echo '</pre>';
 
-                    if (! NOT_VALID_DATA){
-                        // Show form with error messages
-                        showForm($_POST);
-                    } else {
-                        // Form data is valid so store in database
-                        $sql = 'insert into posts ...........';
-                        $db->query($sql);
-                    }
+                    // pull the fields from the POST array.
+                    $title = $_POST['title'];
+                    $content = $_POST['content'];
+                    $startDate  = $_POST['startDate'];
+                    $endDate  = $_POST['endDate'];
+
+                    // This SQL uses double quotes for the query string.  If a field is not a number (it's a string or a date) it needs
+                    // to be enclosed in single quotes.  Note that right after values is a ( and a single quote.  Taht single quote comes right
+                    // before the value of $title.  Note also that at the end of $title is a ', ' inside of double quotes.  What this will all render
+                    // That will generate this piece of SQL:   values ('title text here', 'content text here', '2017-02-01 00:00:00'  and so
+                    // on until the end of the sql command.
+                    $sql = "insert into posts (title, content, startDate, endDate) values ('" . $title . "', '" . $content . "', '" . $startDate . "', '" . $endDate . "');";
+                    $db->query($sql);
 
                 }
                 ?>

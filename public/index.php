@@ -12,7 +12,7 @@ $db = new Database(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
 
 // Get the stories for column 1 from the database
-$sql = 'select title, content, firstname, lastname from posts, users where posts.userid = users.id';
+$sql = 'select * from posts';
 $posts = $db->query($sql);
 
 // Run a simple query that will be rendered in column 2 below
