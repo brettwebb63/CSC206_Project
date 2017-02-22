@@ -74,14 +74,13 @@ class layout
                                 
                                 <li><a href="/about.php">About</a></li>
                                                         
-                                <li><a href="/events.phps">Events</a></li>	                       	                       
+                                <li><a href="/events.php">Events</a></li>	                       	                       
                                 
                                 <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin<span class="caret"></span></a>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li><a href="#">Posts</a></li>
-                                        <li><a href="#">Users</a></li>
-                                        <li><a href="#">Events</a></li>                                    
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Posts<span class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">                                        
+                                        <li><a href="/getPosts.php">List</a></li>
+                                        <li><a href="/createPost.php">New</a></li>                                    
                                     </ul>
                                 </li>
                                 <li><a href="/login.php"><i class="fa fa-sign-in fa-fw"></i> Login</a></li>	                       
